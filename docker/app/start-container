@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+#if [ ! -z "$WWWUSER" ]; then
+#    sudo usermod -u $WWWUSER sail
+#fi
+
+if [ ! -d /.composer ]; then
+    sudo mkdir /.composer
+fi
+
+sudo chmod -R ugo+rw /.composer
+
+sudo /usr/sbin/php-fpm8.2 -F
